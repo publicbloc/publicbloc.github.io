@@ -16,11 +16,7 @@ body {
     color: #000;
     background-color: #FFF;
     margin: 0px auto;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position: relative;
     font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
@@ -350,6 +346,7 @@ a.active {
 
 .navbar-custom {
     margin-bottom: 0;
+    border-color: transparent;
     background-color: #000;
     font-family: "Lato", sans-serif;
     text-transform: uppercase;
@@ -382,9 +379,9 @@ a.active {
 /*Navbar Logo Image*/
 
 .navbar-custom a img {
-    width: 100px;
+    width: 50px;
     display: inline;
-    margin-top: 0px;
+    margin-top: -10px;
     margin-right: 15px;
 }
 
@@ -415,6 +412,7 @@ a.active {
 .navbar-custom .nav li a:focus,
 .navbar-custom .nav li a:active {
     outline: 0;
+    background-color: transparent;
 }
 
 .navbar-custom .nav li.active {
@@ -531,47 +529,13 @@ a.active {
     letter-spacing: 3px;
 }
 
-#intro h2 {
-    color: #FFF;
-    font-size: 30px;
-    font-weight: 300;
-    letter-spacing: 3px;
-    padding-top: 5%;
-}
-
-#intro p {
+#intro p.subtitle {
     color: #ddd;
-    font-size: 20px
-}
-
-#email-button {
-    color: #ddd;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-family: 'Lato', sans-serif;
-    font-size: 20px;
-    border: 2px solid #ddd;
-    -webkit-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out;
-}
-
-#email-button:hover {
-    color: #fff;
-    background: rgb(85, 101, 109);
-    border: 2px solid rgb(255, 255, 255);
 }
 
 .intro-content {
     position: absolute;
-    padding: 15% 10% 5% 10%;
-    left: 0;
-    right: 0;
-    z-index: 0;
-}
-
-.mission-content {
-    position: absolute;
-    padding: 15% 20% 5% 20%;
+    padding: 20% 0 5% 0;
     left: 0;
     right: 0;
     z-index: 0;
@@ -626,35 +590,119 @@ a.fa.fa-angle-down:focus {
 }
 
 
-/* ======= mission ======= */
+/* ======= ABOUT ======= */
 
-#mission {
-    padding-top: 20%;
-    padding-bottom: 5%;
-    background-color: rgb(107, 182, 150)
+#about {
+    padding-top: 90px;
+    padding-bottom: 100px;
+    background-color: rgb(152, 171, 180)
 }
 
-#mission img#prof-pic {
+#about img#prof-pic {
     width: 170px;
     height: auto;
 }
 
-#mission p {
+#about p {
     font-size: 16px;
     max-width: 650px;
     margin: 30px auto;
 }
 
-#mission a {
+#about a {
     font-weight: 500;
 }
 
-#mission img {
+#about img {
     border-radius: 50%;
 }
 
+#about #tl-dr {
+    background: #ccc;
+    color: #555;
+    text-align: center;
+    margin: 0px auto;
+    padding: 20px;
+    height: 200px;
+    width: 50%;
+    max-width: 650px;
+}
+
+#about #tl-dr h3 {
+    font-weight: 300;
+    font-size: 22px;
+    margin-bottom: 40px;
+    color: #111;
+}
+
+#about #tl-dr h4 {
+    font-weight: 300;
+    font-size: 17px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+#about #tl-dr h5 {
+    font-weight: 300;
+    font-size: 14px;
+    font-family: 'Roboto Slab', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+.tldr-proc {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.tldr-icon {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 36px;
+    margin: 0 auto 10px;
+}
+
+#tldr-keyboard {
+    font-size: 50px;
+}
+
+@media screen and (max-width: 1100px) {
+    #about #tl-dr {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    #about #tl-dr h3 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    #about #tl-dr h3 {
+        font-size: 16px;
+    }
+    #about #tl-dr h4 {
+        font-size: 14px;
+    }
+    #about #tl-dr h5 {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #about #tl-dr {
+        padding: 30px 0;
+    }
+    #about #tl-dr h5 {
+        font-size: 11px;
+    }
+}
+
 @media screen and (max-width: 500px) {
-    #mission {
+    #about {
         padding: 60px 10px;
     }
     .tldr-icon {
@@ -666,10 +714,10 @@ a.fa.fa-angle-down:focus {
 }
 
 @media screen and (max-width: 480px) {
-    #mission img#prof-pic {
+    #about img#prof-pic {
         width: 150px;
     }
-    #mission #tl-dr {
+    #about #tl-dr {
         width: 90%;
     }
     h2 {
@@ -681,12 +729,12 @@ a.fa.fa-angle-down:focus {
 }
 
 @media screen and (max-width: 360px) {
-    #mission #tl-dr {
+    #about #tl-dr {
         padding: 20px 0;
         height: 180px;
         width: 95%;
     }
-    #mission #tl-dr h4 {
+    #about #tl-dr h4 {
         margin-bottom: 5px;
     }
     #tldr-keyboard {
@@ -695,138 +743,12 @@ a.fa.fa-angle-down:focus {
 }
 
 
-/* ======= howitworks ======= */
+/* ======= PORTFOLIO ======= */
 
-#howitworks {
-    padding-top: 100px;
+#portfolio {
+    padding-top: 90px;
     padding-bottom: 100px;
-    background-color: #ccc;
-}
-
-#howitworks h3 {
-    font-weight: 400;
-}
-
-#howitworks p {
-    font-size: 16px;
-    margin: 0px auto 40px auto;
-    max-width: 80%;
-}
-
-#howitworks a {
-    font-weight: 500;
-}
-
-.icon {
-    width: 175px;
-    height: 175px;
-    line-height: 175px;
-    max-width: 100%;
-    background: #404E65;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
-    display;
-    block;
-    color: #FFF;
-    font-size: 55px;
-    text-align: center;
-    vertical-align: middle;
-    position: relative;
-    margin: 0 auto 40px;
-}
-
-.icon:hover {
-    -ms-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-    -webkit-transition: all ease .7s;
-    -moz-transition: all ease .7s;
-    transition: all ease .7s;
-}
-
-@media screen and (max-width: 480px) {
-    #howitworks {
-        padding: 60px 10px;
-    }
-    #howitworks h3 {
-        margin-bottom: 20px;
-    }
-    #howitworks p {
-        font-size: 14px;
-        max-width: 100%;
-    }
-}
-
-
-/* ======= whitepage ======= */
-
-#whitepage {
-    background: url(../img/desktop.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-color: #000;
-    color: #fff;
-}
-
-#whitepage .overlay {
-    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.8)), color-stop(17%, rgba(0, 0, 0, 0.73)), color-stop(35%, rgba(0, 0, 0, 0.66)), color-stop(62%, rgba(0, 0, 0, 0.55)), color-stop(100%, rgba(0, 0, 0, 0.4)));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
-    /* IE10+ */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
-    /* W3C */
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#cc000000', endColorstr='#66000000', GradientType=0);
-    /* IE6-9 */
-    padding: 80px 0;
-    background-attachment: fixed;
-}
-
-#whitepage h2 {
-    color: #fff;
-}
-
-a.whitepage-btn {
-    background: none;
-    display: inline-block;
-    padding: 10px 20px;
-    color: #ddd;
-    border: 2px solid #ccc;
-    font-family: "Lato", sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    text-decoration: none;
-    letter-spacing: 1px;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out
-}
-
-a.whitepage-btn:hover,
-a.whitepage-btn:active {
-    color: #fff;
-    border: 2px solid #ccc;
-    background-color: rgba(254, 254, 254, 0.2);
-    padding: 10px 30px;
-}
-
-
-/* ======= team ======= */
-
-#team {
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
-    background: url(../img/site/blockchain1.png);
+    background: url(../img/site/blockchain1.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -835,113 +757,96 @@ a.whitepage-btn:active {
     color: #000;
 }
 
-#team .overlay {
-    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.8)), color-stop(17%, rgba(0, 0, 0, 0.73)), color-stop(35%, rgba(0, 0, 0, 0.66)), color-stop(62%, rgba(0, 0, 0, 0.55)), color-stop(100%, rgba(0, 0, 0, 0.4)));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
-    /* IE10+ */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
-    /* W3C */
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#cc000000', endColorstr='#66000000', GradientType=0);
-    /* IE6-9 */
-    height: 1250px;
-    background-attachment: fixed;
-}
-
-.team-content {
-    position: absolute;
-    padding: 7.5% 10% 5% 10%;
-    left: 0;
-    right: 0;
-    z-index: 0;
-}
-
-#team * {
+#portfolio * {
     z-index: 2;
 }
 
-#team .team-row {
-    margin-left: 20px;
-    margin-right: 20px;
+#portfolio h2 {
+    color: white;
 }
 
-@media (max-width: 50px) {
-    #team .team-row {
-        margin-left: 10px;
-        margin-right: 10px;
+#portfolio .portfolio-row {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+@media (max-width: 950px) {
+    #portfolio .portfolio-row {
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }
 
-#team .section-heading {
+#portfolio .section-heading {
     padding-bottom: 0px;
     margin-bottom: 20px;
 }
 
-#team .team-item-wrapper {
-    width: 20%;
+#portfolio .coming-soon {
+    margin-bottom: 50px;
+    text-transform: lowercase;
+}
+
+#portfolio .portfolio-item-wrapper {
+    width: 31%;
     display: inline-block;
     padding: 0 0 5px;
     margin: 0 1% 30px;
+    vertical-align: top;
 }
 
 @media (max-width: 950px) {
-    #team .team-item-wrapper {
-        width: 20%;
+    #portfolio .portfolio-item-wrapper {
+        width: 47%;
     }
 }
 
 @media (max-width: 630px) {
-    #team .team-item-wrapper {
-        width: 30%;
+    #portfolio .portfolio-item-wrapper {
+        width: 100%;
     }
 }
 
-#team .team-item {
+#portfolio .portfolio-item {
     display: block;
     -webkit-box-shadow: rgba(0, 0, 0, 0.148438) 0 1px 2px;
     box-shadow: rgba(0, 0, 0, 0.148438) 0 1px 2px;
     padding: 0;
     margin-bottom: 10px;
     cursor: pointer;
-    position: center;
+    position: relative;
     overflow: hidden;
 }
 
-#team .team-item img {
-    max-width: 50%;
-    width: 50%;
+#portfolio .portfolio-item img {
+    max-width: 100%;
+    width: 100%;
     opacity: 1.0;
     transition: 0.3s ease-in-out;
     -moz-transition: 0.3s ease-in-out;
     -webkit-transition: 0.3s ease-in-out;
 }
 
-#team .team-overlay {
+#portfolio .portfolio-overlay {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.85);
-    width: 45%;
-    height: 45%;
+    background-color: rgba(26, 30, 31, 0.85);
+    width: 100%;
+    height: 100%;
     opacity: 0;
 }
 
-#team .team-info,
-#team .links,
-#team .links a i,
-#team .links a i::after,
-#team .team-overlay {
+#portfolio .portfolio-info,
+#portfolio .links,
+#portfolio .links a i,
+#portfolio .links a i::after,
+#portfolio .portfolio-overlay {
     -webkit-transition: all 400ms;
     -moz-transition: all 400ms;
     -o-transition: all 400ms;
     transition: all 400ms;
 }
 
-#team .links {
+#portfolio .links {
     width: 40px;
     height: 40px;
     position: absolute;
@@ -958,7 +863,7 @@ a.whitepage-btn:active {
     transform: translate(0, -50px);
 }
 
-#team .links a i {
+#portfolio .links a i {
     position: relative;
     color: #fff;
     font-size: 24px;
@@ -966,12 +871,11 @@ a.whitepage-btn:active {
     z-index: 100;
 }
 
-#team .links a:hover i {
+#portfolio .links a:hover i {
     color: #fff;
 }
 
-#team .links a i::after {
-    color: #ddd;
+#portfolio .links a i::after {
     position: absolute;
     content: "";
     left: -7px;
@@ -982,19 +886,19 @@ a.whitepage-btn:active {
     border-radius: 50%;
 }
 
-#team .team-info {
+#portfolio .portfolio-info {
     position: absolute;
     bottom: -100%;
     left: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: #1E2535;
     color: #fff;
     height: 45px;
-    width: 50%;
+    width: 100%;
     text-align: center;
 }
 
-#team .team-item:hover .team-overlay,
-#team .team-item:hover .links {
+#portfolio .portfolio-item:hover .portfolio-overlay,
+#portfolio .portfolio-item:hover .links {
     opacity: 1;
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
@@ -1003,32 +907,15 @@ a.whitepage-btn:active {
     transform: translate(0, 0);
 }
 
-#team .team-item:hover .team-info {
+#portfolio .portfolio-item:hover .portfolio-info {
     bottom: 0;
 }
 
-#team h3 {
-    color: #ddd;
+#portfolio .portfolio-info h3 {
     font-size: 14px;
     line-height: 45px;
     font-weight: 400;
     margin: 0;
-}
-
-#team .team-member-link {
-    color: #FFF;
-}
-
-#team h2 {
-    color: #FFF;
-    font-size: 60px;
-    font-weight: 300;
-    letter-spacing: 3px;
-    padding-top: 5%;
-}
-
-#team p {
-    color: #ddd;
 }
 
 
@@ -1073,8 +960,8 @@ a.whitepage-btn:active {
 
 #contact #email-button:hover {
     color: #fff;
-    background: rgb(69, 90, 100);
-    border: 2px solid rgb(0, 0, 0);
+    background: rgb(109, 169, 190);
+    border: 2px solid rgb(109, 169, 190);
 }
 
 @media screen and (max-width: 480px) {
@@ -1173,7 +1060,7 @@ a.whitepage-btn:active {
 }
 
 #contact-section .form-wrapper .input-wrapper:after {
-    background-color: #466366;
+    background-color: #00b7c7;
     content: "";
     position: absolute;
     display: block;
@@ -1229,7 +1116,7 @@ a.whitepage-btn:active {
 }
 
 #contact-section .form-wrapper .is-active .input-label {
-    color: #455f61
+    color: #00b7c7
 }
 
 #contact-section .form-wrapper .is-completed .input-label {
@@ -1254,9 +1141,9 @@ a.whitepage-btn:active {
     line-height: 1.5;
     padding: 12px 20px 10px;
     margin: 70px auto 0;
-    color: #4a5c5e;
+    color: #00b7c7;
     background: 0 0;
-    border: 2px solid #4b7377;
+    border: 2px solid #00b7c7;
     border-radius: 3px;
     position: relative;
     overflow: hidden;
@@ -1266,7 +1153,7 @@ a.whitepage-btn:active {
 #contact-section .form-wrapper .message-btn:focus,
 #contact-section .form-wrapper .message-btn:hover {
     color: #f2f2f2;
-    background: #4b6568
+    background: #00b7c7
 }
 
 #contact-section .form-wrapper #message-label {
@@ -1285,6 +1172,8 @@ footer {
 footer h3 {
     font-weight: 300;
 }
+
+ul.social-buttons {}
 
 ul.social-buttons li a {
     display: block;
@@ -1340,6 +1229,50 @@ ul.social-buttons li a:active {
     padding: 0px !important;
 }
 
+#facebook,
+#twitter,
+#instagram,
+#linkedin,
+#codepen,
+#github,
+#pinterest,
+#spotify {
+    /*border: 1px solid #fff !important;*/
+}
+
+#facebook:hover {
+    background-color: #3B5998;
+}
+
+#twitter:hover {
+    background-color: #55ACEE;
+}
+
+#instagram:hover {
+    background-color: #3f729b;
+}
+
+#codepen:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+#linkedin:hover {
+    background-color: #0077B5
+}
+
+#github:hover {
+    background-color: #4183C4;
+}
+
+#pinterest:hover {
+    background-color: #CC2127;
+}
+
+#spotify:hover {
+    background-color: #2ebd59;
+}
+
 #to-top {
     transition: all 0.5s;
 }
@@ -1382,4 +1315,118 @@ ul.social-buttons li a:active {
         padding-top: 0px;
         margin-top: 0px;
     }
+}
+
+
+/* ============== PORTFOLIO MODALS ============== */
+
+.modal-header,
+.modal-footer {
+    background-color: #F0F0F0;
+}
+
+.modal-header .close {
+    margin-top: -13px;
+}
+
+.close {
+    font-size: 40px;
+    font-weight: 300;
+}
+
+@media screen and (min-width: 768px) {
+    .modal-dialog {
+        width: 700px;
+    }
+}
+
+.modal-title {
+    text-align: center;
+    font-weight: 400;
+}
+
+.modal-title-description {
+    text-align: center;
+    margin: 10px 0 0 -25px;
+    font-style: italic;
+    font-weight: 400;
+    color: #555;
+}
+
+.modal-content {
+    border-radius: 0px;
+}
+
+.modal-body img {
+    margin: 0 auto;
+}
+
+.modal-body p {
+    text-align: center;
+}
+
+@media (max-width: 340px) {
+    .modal-body p {
+        font-size: 14px;
+    }
+}
+
+.modal-body p.visit {
+    margin-top: 50px;
+}
+
+.modal-body #visit-btn {
+    padding: 10px;
+    color: rgb(109, 169, 190);
+    border: 2px solid rgb(109, 169, 190);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    margin: 40px 10px;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.modal-body #visit-btn:hover {
+    color: #fff;
+    background-color: rgb(109, 169, 190);
+}
+
+.modal-description {
+    font-size: 15px;
+    margin: 0px 25px;
+}
+
+@media (max-width: 340px) {
+    .modal-description {
+        margin: 0;
+    }
+}
+
+.modal-footer .btn {
+    border-radius: 0px;
+    font-family: 'Lato', sans-serif;
+}
+
+::-moz-selection {
+    text-shadow: none;
+    background: #fed136;
+}
+
+::selection {
+    text-shadow: none;
+    background: #fed136;
+}
+
+img::selection {
+    background: 0 0;
+}
+
+img::-moz-selection {
+    background: 0 0;
+}
+
+body {
+    webkit-tap-highlight-color: #fed136;
 }
